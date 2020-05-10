@@ -1,0 +1,98 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: bb1ba0d07180547e24231296812b7d75a77820757efaa2a945441abdec17d9ef
+
+name:           haskell-bitly
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-bitly#readme>
+homepage:       https://github.com/githubuser/haskell-bitly#readme
+bug-reports:    https://github.com/githubuser/haskell-bitly/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-bitly
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_bitly
+  hs-source-dirs:
+      src
+  default-extensions: EmptyCase FlexibleContexts FlexibleInstances InstanceSigs MultiParamTypeClasses LambdaCase MultiWayIf NamedFieldPuns TupleSections DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies GeneralizedNewtypeDeriving StandaloneDeriving BangPatterns KindSignatures TypeOperators OverloadedStrings ScopedTypeVariables TypeApplications ConstraintKinds RankNTypes ApplicativeDo DefaultSignatures PatternSynonyms ExistentialQuantification FunctionalDependencies GADTs DataKinds TypeFamilies TypeFamilyDependencies QuasiQuotes TemplateHaskell EmptyDataDecls
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , http-types
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , random-strings
+    , text
+  default-language: Haskell2010
+
+executable haskell-bitly-exe
+  main-is: Main.hs
+  other-modules:
+      ErrorCode
+      Type
+      Util
+      Paths_haskell_bitly
+  hs-source-dirs:
+      app
+  default-extensions: EmptyCase FlexibleContexts FlexibleInstances InstanceSigs MultiParamTypeClasses LambdaCase MultiWayIf NamedFieldPuns TupleSections DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies GeneralizedNewtypeDeriving StandaloneDeriving BangPatterns KindSignatures TypeOperators OverloadedStrings ScopedTypeVariables TypeApplications ConstraintKinds RankNTypes ApplicativeDo DefaultSignatures PatternSynonyms ExistentialQuantification FunctionalDependencies GADTs DataKinds TypeFamilies TypeFamilyDependencies QuasiQuotes TemplateHaskell EmptyDataDecls
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , haskell-bitly
+    , http-types
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , random-strings
+    , text
+  default-language: Haskell2010
+
+test-suite haskell-bitly-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_bitly
+  hs-source-dirs:
+      test
+  default-extensions: EmptyCase FlexibleContexts FlexibleInstances InstanceSigs MultiParamTypeClasses LambdaCase MultiWayIf NamedFieldPuns TupleSections DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies GeneralizedNewtypeDeriving StandaloneDeriving BangPatterns KindSignatures TypeOperators OverloadedStrings ScopedTypeVariables TypeApplications ConstraintKinds RankNTypes ApplicativeDo DefaultSignatures PatternSynonyms ExistentialQuantification FunctionalDependencies GADTs DataKinds TypeFamilies TypeFamilyDependencies QuasiQuotes TemplateHaskell EmptyDataDecls
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , haskell-bitly
+    , http-types
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , random-strings
+    , text
+  default-language: Haskell2010

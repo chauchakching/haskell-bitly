@@ -1,0 +1,7 @@
+- patterns:
+  - .*\.hs$
+  - ^haskell-bitly.cabal$
+  - ^stack.yam$
+  commands:
+  - stack build
+  - stack exec haskell-bitly-exe

@@ -1,0 +1,109 @@
+name:                haskell-bitly
+version:             0.1.0.0
+github:              "githubuser/haskell-bitly"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/haskell-bitly#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- Spock
+- mtl
+- text
+- aeson
+- monad-logger
+- persistent
+- persistent-sqlite
+- persistent-template
+- random-strings
+- http-types
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-bitly-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-bitly
+
+tests:
+  haskell-bitly-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-bitly
+
+default-extensions:
+  # Trivial lifting of standards-imposed limitations
+  - EmptyCase
+  - FlexibleContexts
+  - FlexibleInstances
+  - InstanceSigs
+  - MultiParamTypeClasses
+  # Syntactic conveniences
+  - LambdaCase
+  - MultiWayIf
+  - NamedFieldPuns
+  - TupleSections
+  # Extensions to the deriving mechanism
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - GeneralizedNewtypeDeriving
+  - StandaloneDeriving
+  # Lightweight syntactic adjustments
+  - BangPatterns
+  - KindSignatures
+  - TypeOperators
+  # Polymorphic string literals
+  - OverloadedStrings
+  # Simple extensions to aid type annotation
+  - ScopedTypeVariables
+  - TypeApplications
+  # Simple extensions to the Haskell type system
+  - ConstraintKinds
+  - RankNTypes
+  # Intermediate syntactic adjustments
+  - ApplicativeDo
+  - DefaultSignatures
+  - PatternSynonyms
+  # Intermediate extensions to the Haskell type system
+  - ExistentialQuantification
+  - FunctionalDependencies
+  - GADTs
+  # Advanced extensions to the Haskell type system
+  - DataKinds
+  - TypeFamilies
+  - TypeFamilyDependencies
+
+  # Other required by libraries
+  - QuasiQuotes
+  - TemplateHaskell
+  - EmptyDataDecls
